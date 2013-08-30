@@ -28,7 +28,6 @@
  *
  * }}}
  */
-
 (function ($) {
 
   $.Jcrop = function (obj, opt) {
@@ -315,7 +314,7 @@
 
       $img.width($origimg.width());
       $img.height($origimg.height());
-      $origimg.after($img).hide();
+      $origimg.after($img).css({position: 'absolute', zIndex: -1, visibility: 'hidden'});
 
     } else {
       $img = $origimg.css(img_css).show();
